@@ -66,3 +66,11 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight') nextSlide();
     if (e.key === 'ArrowLeft') prevSlide();
 });
+
+// 初期状態の設定
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.prev').disabled = true;
+    if (totalSlides === 1) {
+        document.querySelector('.next').disabled = true;
+    }
+});
